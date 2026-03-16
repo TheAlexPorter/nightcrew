@@ -1,4 +1,23 @@
-# 🌙 Night Crew
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/7717e48e-4a89-4693-8ca9-68f9f87e1c19" alt="Night Crew" width="100%" />
+
+  <h1>🌙 Night Crew</h1>
+
+  <p>
+    Move a card into <strong>Queue</strong> — wake up to merged PRs.<br/>
+    Autonomous Trello → Claude Code → GitHub agent daemon.
+  </p>
+
+  <p>
+    <img src="https://img.shields.io/badge/built_with-Bun-black?style=flat-square" />
+    <img src="https://img.shields.io/badge/agent-Claude_Code-blueviolet?style=flat-square" />
+    <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" />
+  </p>
+
+  <br/>
+</div>
+
+https://github.com/user-attachments/assets/7717e48e-4a89-4693-8ca9-68f9f87e1c19
 
 > Move a card into **Queue** — wake up to merged PRs.
 
