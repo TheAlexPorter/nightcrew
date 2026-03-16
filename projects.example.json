@@ -1,0 +1,76 @@
+[
+  {
+    "id": "my-workspace",
+    "trelloApiKey": "YOUR_TRELLO_API_KEY",
+    "trelloToken": "YOUR_TRELLO_TOKEN",
+    "trelloBoardId": "YOUR_BOARD_ID",
+
+    "queueListId":       "LIST_ID_QUEUE",
+    "inProgressListId":  "LIST_ID_IN_PROGRESS",
+    "planReviewListId":  "LIST_ID_PLAN_REVIEW",
+    "approvedListId":    "LIST_ID_APPROVED",
+    "humanReviewListId": "LIST_ID_HUMAN_REVIEW",
+
+    "defaultRepo": "platform",
+    "maxConcurrent": 3,
+
+    "repos": {
+
+      "platform": {
+        "path": "/Users/alex/code/platform",
+        "baseBranch": "main",
+        "systemContext": "Turborepo monorepo. TypeScript throughout. Run tests from the package directory.",
+
+        "monorepo": true,
+        "packageRequired": true,
+        "rootTestCmd": "bun run test",
+
+        "dangerousPackages": [
+          "packages/shared",
+          "packages/config"
+        ],
+
+        "packages": {
+          "web": {
+            "path": "apps/web",
+            "testCmd": "bun test",
+            "systemContext": "React 19, Tailwind v4, TypeScript. Component files in src/components/. Pages in src/pages/."
+          },
+          "api": {
+            "path": "apps/api",
+            "testCmd": "bun test",
+            "systemContext": "Hono API server. Routes in src/routes/. Use Zod for all validation. Add JSDoc to exported functions."
+          },
+          "mobile": {
+            "path": "apps/mobile",
+            "testCmd": "bun test",
+            "systemContext": "Expo / React Native. Use NativeWind for styling. Test on iOS simulator."
+          },
+          "shared": {
+            "path": "packages/shared",
+            "testCmd": "bun test",
+            "systemContext": "Shared types and utilities used by all apps. Do not remove or rename exports. Additions only unless explicitly instructed."
+          },
+          "config": {
+            "path": "packages/config",
+            "testCmd": "bun test",
+            "systemContext": "Shared ESLint, TypeScript, and Tailwind configs. Changes here affect the entire monorepo."
+          },
+          "root": {
+            "path": ".",
+            "testCmd": "bun run test",
+            "systemContext": "Use for cross-package tasks: dependency updates, CI config, root tooling."
+          }
+        }
+      },
+
+      "marketing": {
+        "path": "/Users/alex/code/marketing-site",
+        "baseBranch": "main",
+        "monorepo": false,
+        "systemContext": "Next.js marketing site. Tailwind CSS. Keep components simple."
+      }
+
+    }
+  }
+]

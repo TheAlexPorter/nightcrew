@@ -1,0 +1,12 @@
+{
+  "name": "trello-agent-daemon",
+  "version": "1.0.0",
+  "description": "Autonomous Trello → Claude Code → GitHub PR daemon",
+  "scripts": {
+    "start": "bun run src/daemon.ts",
+    "dev": "bun --watch run src/daemon.ts",
+    "setup": "bun run src/setup.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
